@@ -1,30 +1,57 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import store from "../store";
+import Router from "vue-router";
 import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import BlogPost from "../views/BlogPost.vue";
+import Overview from "../views/Overview.vue";
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
-const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
-];
-
-const router = new VueRouter({
+const router = new Router({
   mode: "history",
-  base: process.env.BASE_URL,
-  routes,
+  routes: [
+    {
+      path: "/",
+      name: "Home",
+      component: Home,
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: About,
+    },
+    {
+      path: "/blog/:uid",
+      name: "blog-post",
+      component: BlogPost,
+    },
+    {
+      path: "/category/:tagid",
+      name: "blog-category",
+      component: Overview,
+    },
+    {
+      path: "*",
+      name: "everything",
+      component: Home,
+    },
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return {
+        x: 0,
+        y: 0,
+      };
+    }
+  },
+});
+
+router.beforeEach((to, from, next) => {
+  store.state.showMobileMenu = false;
+  next();
 });
 
 export default router;

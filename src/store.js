@@ -45,8 +45,6 @@ export default new Vuex.Store({
       if (typeof results[0] !== "undefined") {
         var tag = results[0].tags[0].toUpperCase();
         commit("SET_BLOGPREVIEWS_" + tag, results);
-      } else {
-        console.log("there are no results for this category");
       }
     },
     toggleShowMobileMenu({ commit }, setting) {

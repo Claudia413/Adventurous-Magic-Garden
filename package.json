@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@prismicio/client": "^5.1.0",
-    "@prismicio/vue": "^2.0.11",
+    "@prismicio/vue": "^2.1.2",
     "@vue/composition-api": "^1.4.9",
     "core-js": "^3.19.1",
     "mdi-vue": "^3.0.12",

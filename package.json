@@ -17,7 +17,7 @@
     "prismic-dom": "^2.2.7",
     "prismic-javascript": "^3.0.2",
     "prismic-vue": "^2.0.1",
-    "vue": "^2.6.14",
+    "vue": "^3.2.32",
     "vue-cat-carousel": "^0.9.3-6",
     "vue-headful": "^2.1.0",
     "vue-masonry": "^0.15.0",

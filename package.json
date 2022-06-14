@@ -11,7 +11,7 @@
     "@prismicio/client": "^5.1.1",
     "@prismicio/vue": "^2.1.2",
     "@vue/composition-api": "^1.4.9",
-    "core-js": "^3.21.1",
+    "core-js": "^3.23.1",
     "mdi-vue": "^3.0.12",
     "moment": "^2.29.2",
     "prismic-dom": "^2.2.7",

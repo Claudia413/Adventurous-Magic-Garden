@@ -13,7 +13,7 @@
     "@vue/composition-api": "^1.4.9",
     "core-js": "^3.21.1",
     "mdi-vue": "^3.0.12",
-    "moment": "^2.29.2",
+    "moment": "^2.29.4",
     "prismic-dom": "^2.2.7",
     "prismic-javascript": "^3.0.2",
     "prismic-vue": "^2.0.1",
